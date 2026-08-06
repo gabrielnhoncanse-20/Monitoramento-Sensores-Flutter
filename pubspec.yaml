@@ -1,0 +1,20 @@
+name: monitoramento_sensores
+description: Aplicativo Flutter para monitoramento de sensores.
+distribution:
+  - sdk: ^3.5.0
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
