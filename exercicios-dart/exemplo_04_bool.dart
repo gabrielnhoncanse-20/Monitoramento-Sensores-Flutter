@@ -9,13 +9,17 @@ void main() {
   print('Sensor online? $sensorOnline');
   print('Intervenção necessária? $intervencaoNecessaria');
 
-  if (areaAtiva && coletaHabilitada) {
-    print('Pode simular coleta de sensores.');
+  if (areaAtiva && sensorOnline && coletaHabilitada) {
+    print('Simulação de coleta permitida.');
   } else {
-    print('Coleta bloqueada para esta área.');
+    print('Simulação de coleta bloqueada.');
   }
 
   if (!sensorOnline) {
-    print('Atenção: sensor offline - verificar IoT.');
+    print('Aviso: IoT offline.');
+  }
+
+  if (intervencaoNecessaria) {
+    print('Equipe deve ser acionada');
   }
 }

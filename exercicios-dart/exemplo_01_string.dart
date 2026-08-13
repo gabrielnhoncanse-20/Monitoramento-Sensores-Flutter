@@ -3,20 +3,12 @@ void main() {
   String rodovia = 'SP-280';
   String localizacao = 'Sorocaba / SP';
   String sensorId = 'SENSOR-01';
+  print(
+      'Ficha do monitoramento: Área = $codigoArea | Rodovia = $rodovia | Localização = $localizacao | Sensor = $sensorId');
 
-  // Concatenação
-  String frase1 = 'Área: ' + codigoArea;
+  print('Código da área em maiúsculas: ${codigoArea.toUpperCase()}');
 
-  // Interpolação (forma preferida)
-  String frase2 = 'Área: $codigoArea | Rodovia: $rodovia';
-  String frase3 = 'Local: $localizacao | Sensor: $sensorId';
+  print('Quantidade de caracteres do sensorId: ${sensorId.length}');
 
-  print(frase1);
-  print(frase2);
-  print(frase3);
-
-  print(codigoArea.toUpperCase());
-  print(codigoArea.toLowerCase());
-  print(codigoArea.length);
-  print(codigoArea.contains('SP280'));
+  print('A rodovia contém "-"? ${rodovia.contains('-')}');
 }

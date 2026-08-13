@@ -1,23 +1,18 @@
 void main() {
-  String? tipoVegetacao; // começa null
-  String? observacoes = null;
-  double? inclinacaoTerreno;
+  List<String> status = ['NORMAL', 'ATENCAO', 'URGENTE'];
+  List<double> densidades = [0.65, 0.72, 0.88, 0.94];
 
-  print(tipoVegetacao);
-  print(observacoes);
-  print(inclinacaoTerreno);
-
-  tipoVegetacao = 'Gramínea';
-  observacoes = 'Crescimento acelerado na faixa marginal';
-  inclinacaoTerreno = 12.5;
-
-  String tipoExibicao = tipoVegetacao ?? 'Tipo não informado';
-  String obsExibicao = observacoes ?? 'Sem observações';
-
-  print(tipoExibicao);
-  print(obsExibicao);
-
-  if (inclinacaoTerreno != null) {
-    print('Inclinação: ${inclinacaoTerreno.toStringAsFixed(1)}°');
+  for (String item in status) {
+    if (item == 'NORMAL') {
+      print('Status: $item - Sistema estável.');
+    } else if (item == 'ATENCAO') {
+      print('Status: $item - Verificar monitoramento.');
+    } else if (item == 'URGENTE') {
+      print('Status: $item - Acionar equipe imediata.');
+    }
   }
+  densidades.add(0.81);
+  List<double> densidadesCriticas = densidades.where((d) => d >= 0.70).toList();
+  print('Densidades >= 0.70: $densidadesCriticas');
+  print('Quantidade total de densidades: ${densidades.length}');
 }

@@ -1,15 +1,23 @@
 void main() {
-  Set<String> rodovias = {
-    'SP-280',
-    'BR-116',
-    'SP-330',
+  Map<String, dynamic> medicao = {
+    'id': 101,
+    'areaCodigo': 'SP-280',
+    'alturaVegetacao': 1.85,
+    'densidade': 0.72,
+    'temperatura': 28.4,
+    'umidade': 62.0,
+    'sensorId': null,
   };
 
-  print(rodovias);
+  print('Código da área: ${medicao['areaCodigo']}');
+  print('Densidade: ${medicao['densidade']}');
+  print('Temperatura: ${medicao['temperatura']}');
 
-  rodovias.add('SP-280'); // não duplica
-  rodovias.add('BR-101');
+  medicao['sensorId'] = 'SENSOR-07';
 
-  print('Após inserções: $rodovias');
-  print('Contém BR-116? ${rodovias.contains('BR-116')}');
+  medicao['densidade'] = 0.81;
+
+  medicao.forEach((chave, valor) {
+    print('$chave => $valor');
+  });
 }

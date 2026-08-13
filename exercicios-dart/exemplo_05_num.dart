@@ -1,10 +1,16 @@
 void main() {
-  num leitura = 1; // int por baixo
-  num densidade = 0.72; // double por baixo
+  num leitura = 42;
+  print('Leitura inteira: $leitura');
 
-  print(leitura);
-  print(densidade);
+  leitura = 42.7;
+  print('Leitura decimal: $leitura');
 
-  leitura = 1.5; // permitido, porque num aceita decimal
-  print(leitura);
+  String? observacoes;
+
+  double? inclinacaoTerreno = 12.5;
+  print('Observações: ${observacoes ?? 'não informado'}');
+
+  if (inclinacaoTerreno != null) {
+    print('Inclinação do terreno: ${inclinacaoTerreno.toStringAsFixed(2)}°');
+  }
 }

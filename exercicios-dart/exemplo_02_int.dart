@@ -1,16 +1,22 @@
 void main() {
-  int idArea = 1;
+  int idArea = 5;
   int idMedicao = 10;
-  int totalMedicoes = 12;
-  int sensoresAtivos = 3;
+  int alertasAbertos = 3;
+  int sensoresAtivos = 4;
 
-  int somaIds = idArea + idMedicao;
-  int proximaMedicao = idMedicao + 1;
+  int soma = idArea + idMedicao;
+  print('Soma de idArea + idMedicao: $soma');
 
-  print('ID da área: $idArea');
-  print('ID da medição: $idMedicao');
-  print('Total de medições: $totalMedicoes');
-  print('Sensores ativos: $sensoresAtivos');
-  print('Soma dos IDs: $somaIds');
-  print('Próxima medição: $proximaMedicao');
+  int proximoIdMedicao = idMedicao + 1;
+  print('Próximo ID de medição: $proximoIdMedicao');
+
+  if (alertasAbertos >= 3) {
+    print('Operação crítica');
+  } else {
+    print('Operação estável');
+  }
+
+  // 4. O dobro de sensoresAtivos.
+  int dobroSensores = sensoresAtivos * 2;
+  print('Dobro de sensoresAtivos: $dobroSensores');
 }
